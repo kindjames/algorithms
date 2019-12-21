@@ -1,0 +1,20 @@
+{
+  "name": "algorithm-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava --watch"
+  },
+  "keywords": [],
+  "author": "James Kind",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "ava": "^2.4.0"
+  },
+  "dependencies": {
+    "debug": "^4.1.1"
+  }
+}
