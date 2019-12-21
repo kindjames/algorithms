@@ -1,8 +1,12 @@
 module.exports = function reverse(arr) {
-  for (let i = 0; i < arr.length / 2; i++) {
-    const left = arr[i]
-    const right = arr[arr.length - (1 + i)]
-    arr[i] = right
-    arr[arr.length - (1 + i)] = left
+  let leftIndex = 0, rightIndex = arr.length - 1
+
+  while (leftIndex < rightIndex) {
+    const temp = arr[leftIndex]
+    arr[leftIndex] = arr[rightIndex]
+    arr[rightIndex] = temp
+
+    leftIndex++
+    rightIndex--
   }
 }
