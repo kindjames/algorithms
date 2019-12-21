@@ -1,17 +1,20 @@
 import test from 'ava'
 import { Trie } from '../../src/structures'
 
-test('it returns the correct item from the list', t => {
+test(`exists() returns true when an item was added`, t => {
   let tree = new Trie()
-  tree.add('name')
-  tree.add('hello')
-  tree.add('kind')
-  tree.add('james')
-  tree.add('is')
-  tree.add('my')
-  tree.add('there')
+  tree.add('foo')
+  tree.add('bar')
 
-  const result = tree.get(3)
+  t.true(tree.exists('foo'))
+  t.true(tree.exists('bar'))
+})
 
-  t.is(result, 'my')
+test(`exists() returns false for a subset of them item`, t => {
+  let tree = new Trie()
+  tree.add('foo')
+  tree.add('bar')
+
+  t.false(tree.exists('fo'))
+  t.false(tree.exists('barr'))
 })
