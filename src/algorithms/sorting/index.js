@@ -1,3 +1,4 @@
 module.exports = {
-  bubble: require('./bubble')
+  bubble: require('./bubble'),
+  reverse: require('./reverse'),
 }
